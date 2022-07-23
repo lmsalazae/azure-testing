@@ -5,6 +5,17 @@
 			"referenceName": "DataLakeStorage",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"SistemaDeArchivos": {
+				"type": "string"
+			},
+			"Dirección": {
+				"type": "string"
+			},
+			"NombreDeArchivo": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "Parquet",
 		"typeProperties": {
