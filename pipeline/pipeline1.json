@@ -26,7 +26,11 @@
 					},
 					"dataset": {
 						"referenceName": "DataSetSQL",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"Esquema": " ",
+							"Tabla": " "
+						}
 					}
 				}
 			}
