@@ -28,7 +28,7 @@
 			],
 			"scriptLines": [
 				"parameters{",
-				"     FileSystemParam as string ('storage-sandbox'),",
+				"     FileSystemParam as string ('storagename45268'),",
 				"     FolderPathParam as string ('landing/Address'),",
 				"     FileNameParam as string ('Address*.parquet'),",
 				"     SchemaNameSink as string ('CleanData'),",
