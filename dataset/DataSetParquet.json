@@ -1,0 +1,29 @@
+{
+	"name": "DataSetParquet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ServicioVinculadoDataLake",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"Sistemadearchivos": {
+				"type": "string"
+			},
+			"Direccion": {
+				"type": "string"
+			},
+			"NombredeArchivo": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
