@@ -52,7 +52,7 @@
 		"parameters": {
 			"FileSystemSource": {
 				"type": "string",
-				"defaultValue": "storage-sandbox"
+				"defaultValue": "storagename45268"
 			},
 			"FolderPathSource": {
 				"type": "string",
