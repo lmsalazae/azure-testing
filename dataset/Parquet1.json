@@ -6,13 +6,13 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"FileSystem": {
+			"SistemaArchivos": {
 				"type": "string"
 			},
-			"FolderPath": {
+			"Direccion": {
 				"type": "string"
 			},
-			"FileName": {
+			"Nombrearchivo": {
 				"type": "string"
 			}
 		},
