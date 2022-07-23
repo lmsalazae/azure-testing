@@ -13,16 +13,12 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": [
-					{
-						"name": "Esquemadeconsulta"
-					}
-				],
+				"userProperties": [],
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "SELECT \nTABLE_NAME \nFROM [INFORMATION_SCHEMA].[tables] \nWHERE TABLE_SCHEMA=''\n",
+							"value": "SELECT \nTABLE_NAME \nFROM [INFORMATION_SCHEMA].[tables] \nWHERE TABLE_SCHEMA='@{pipeline().parameters.Esquemadeconsulta}'\n",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
@@ -34,8 +30,26 @@
 					},
 					"firstRowOnly": false
 				}
+			},
+			{
+				"name": "ForEach1",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "Lookup1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": []
 			}
 		],
+		"parameters": {
+			"Esquemadeconsulta": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
