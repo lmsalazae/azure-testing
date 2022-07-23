@@ -17,8 +17,12 @@
 		"type": "AzureSqlTable",
 		"schema": [],
 		"typeProperties": {
-			"table": {
+			"schema": {
 				"value": "@dataset().Esquema",
+				"type": "Expression"
+			},
+			"table": {
+				"value": "@dataset().Tabla",
 				"type": "Expression"
 			}
 		}
