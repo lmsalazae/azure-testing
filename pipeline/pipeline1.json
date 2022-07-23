@@ -16,6 +16,11 @@
 				"userProperties": []
 			}
 		],
+		"parameters": {
+			"esquemadeconsulta": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
