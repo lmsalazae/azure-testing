@@ -28,6 +28,11 @@
 				}
 			}
 		],
+		"parameters": {
+			"EsquemaDeConsulta": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
