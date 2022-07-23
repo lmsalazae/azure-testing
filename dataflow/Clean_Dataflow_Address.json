@@ -29,8 +29,8 @@
 			"scriptLines": [
 				"parameters{",
 				"     FileSystemParam as string ('storagename45268'),",
-				"     FolderPathParam as string ('landing/Address'),",
-				"     FileNameParam as string ('Address*.parquet'),",
+				"     FolderPathParam as string ('landing/CustomerAddress'),",
+				"     FileNameParam as string ('*.parquet'),",
 				"     SchemaNameSink as string ('CleanData'),",
 				"     TableNameSink as string ('Address')",
 				"}",
