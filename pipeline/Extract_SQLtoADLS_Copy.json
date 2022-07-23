@@ -141,11 +141,6 @@
 				"type": "string"
 			}
 		},
-		"variables": {
-			"testvar": {
-				"type": "String"
-			}
-		},
 		"annotations": []
 	}
 }
