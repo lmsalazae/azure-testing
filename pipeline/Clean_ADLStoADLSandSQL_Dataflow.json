@@ -115,7 +115,7 @@
 			},
 			"SchemaNameSink": {
 				"type": "string",
-				"defaultValue": "CleanData"
+				"defaultValue": "MickCleanData"
 			},
 			"SchemaQuery": {
 				"type": "string",
