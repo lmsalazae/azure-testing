@@ -17,11 +17,7 @@
 					"name": "sink1"
 				}
 			],
-			"transformations": [
-				{
-					"name": "derivedColumn1"
-				}
-			],
+			"transformations": [],
 			"scriptLines": [
 				"parameters{",
 				"     FileSystemParam as string ('container-name'),",
@@ -32,25 +28,14 @@
 				"}",
 				"source(allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     ignoreNoFilesFound: true,",
-				"     rowUrlColumn: 'FileName',",
-				"     format: 'parquet',",
-				"     fileSystem: 'container-name',",
-				"     folderPath: 'landing/Address',",
-				"     fileName: 'Address-2022-07-22T23:50:42.6397854.parquet',",
-				"     compressionCodec: 'snappy') ~> source1",
-				"source1 derive(each(match(type=='string'), $$ = coalesce($$,'No Data')),",
-				"          each(match(type=='timestamp'), $$ = coalesce($$,toTimestamp('1990-01-01 00:00:00.000'))),",
-				"          each(match(type=='integer'), $$ = coalesce($$,toInteger(0))),",
-				"          each(match(type=='boolean'), $$ = coalesce($$,toBoolean('false'))),",
-				"          each(match(name=='Weight'||name=='SubTotal'||name=='TaxAmt'||name=='Freight'||name=='TotalDue'), $$ = coalesce(toDecimal($$),toDecimal('0.0')))) ~> derivedColumn1",
-				"derivedColumn1 sink(allowSchemaDrift: true,",
-				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false,",
+				"     format: 'parquet') ~> source1",
+				"source1 sink(validateSchema: false,",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
 				"     store: 'cache',",
 				"     format: 'inline',",
-				"     output: false,",
+				"     output: true,",
 				"     saveOrder: 1) ~> sink1"
 			]
 		}
