@@ -1,0 +1,12 @@
+{
+	"name": "DataSetSQL",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Base_VinculadaSQL",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}
