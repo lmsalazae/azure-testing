@@ -133,6 +133,9 @@
 			"CopySchema": {
 				"type": "string",
 				"defaultValue": "SalesLT"
+			},
+			"FileSystemSink": {
+				"type": "string"
 			}
 		},
 		"variables": {
