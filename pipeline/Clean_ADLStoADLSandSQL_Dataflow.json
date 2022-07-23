@@ -59,7 +59,7 @@
 			},
 			"MetadataSchema": {
 				"type": "string",
-				"defaultValue": "Sales"
+				"defaultValue": "SalesLT"
 			}
 		},
 		"annotations": []
