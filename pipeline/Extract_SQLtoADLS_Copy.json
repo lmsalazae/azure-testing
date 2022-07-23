@@ -138,7 +138,8 @@
 				"defaultValue": "SalesLT"
 			},
 			"FileSystemSink": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "container-name"
 			}
 		},
 		"annotations": []
