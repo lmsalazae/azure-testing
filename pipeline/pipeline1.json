@@ -82,6 +82,10 @@
 										"Tabla": {
 											"value": "@item()[\"TABLE_NAME\"]",
 											"type": "Expression"
+										},
+										"Esquema": {
+											"value": "@pipeline().parameters.EsquemaDeConsulta",
+											"type": "Expression"
 										}
 									}
 								}
