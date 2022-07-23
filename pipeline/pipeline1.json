@@ -13,10 +13,18 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": [],
+				"userProperties": [
+					{
+						"name": "Esquemadeconsulta"
+					}
+				],
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
+						"sqlReaderQuery": {
+							"value": "SELECT \nTABLE_NAME \nFROM [INFORMATION_SCHEMA].[tables] \nWHERE TABLE_SCHEMA=''\n",
+							"type": "Expression"
+						},
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
