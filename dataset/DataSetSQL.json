@@ -9,7 +9,7 @@
 			"Tabla": {
 				"type": "string"
 			},
-			"Esquem": {
+			"Esquema": {
 				"type": "string"
 			}
 		},
