@@ -28,11 +28,24 @@
 						"referenceName": "DataSetSQL",
 						"type": "DatasetReference",
 						"parameters": {
-							"Esquema": " ",
-							"Tabla": " "
+							"Esquema": "1",
+							"Tabla": "2"
 						}
 					}
 				}
+			},
+			{
+				"name": "ForEach1",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "Lookup1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": []
 			}
 		],
 		"parameters": {
