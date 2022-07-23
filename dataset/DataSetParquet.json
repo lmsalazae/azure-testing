@@ -5,6 +5,17 @@
 			"referenceName": "ServicioVinculadoDataLake",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"Sistemadearchivos": {
+				"type": "string"
+			},
+			"Direccion": {
+				"type": "string"
+			},
+			"Nombredearchivo": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "Parquet",
 		"typeProperties": {
