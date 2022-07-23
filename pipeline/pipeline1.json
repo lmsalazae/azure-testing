@@ -28,6 +28,11 @@
 				}
 			}
 		],
+		"parameters": {
+			"Esquema_de_consulta": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
