@@ -4,7 +4,7 @@
 		"annotations": [],
 		"type": "AzureBlobFS",
 		"typeProperties": {
-			"url": "https://cuentasandbox.dfs.core.windows.net"
+			"url": "https://storagename45268.dfs.core.windows.net"
 		}
 	}
 }
