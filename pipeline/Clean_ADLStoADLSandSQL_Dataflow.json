@@ -111,7 +111,7 @@
 		"parameters": {
 			"FileSystem": {
 				"type": "string",
-				"defaultValue": "storage-sandbox"
+				"defaultValue": "container-name"
 			},
 			"SchemaNameSink": {
 				"type": "string",
