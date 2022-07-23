@@ -1,0 +1,20 @@
+{
+	"name": "DataSetSQL",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ServicioVinculadoSQL",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"Tabla": {
+				"type": "string"
+			},
+			"Esquem": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}
