@@ -79,7 +79,10 @@
 									"referenceName": "Parquet1",
 									"type": "DatasetReference",
 									"parameters": {
-										"FileSystem": "storage-sandbox",
+										"FileSystem": {
+											"value": "@pipeline().parameters.FileSystemSink",
+											"type": "Expression"
+										},
 										"FolderPath": {
 											"value": "landing/@{item()['TABLE_NAME']}",
 											"type": "Expression"
