@@ -1,0 +1,41 @@
+{
+	"name": "DataSetParquet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ServicioVinculadoDataLake",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"SistemaDeArchivos": {
+				"type": "string"
+			},
+			"Direccion": {
+				"type": "string"
+			},
+			"NombreDeArchivo": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().NombreDeArchivo",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@dataset().Direccion",
+					"type": "Expression"
+				},
+				"fileSystem": {
+					"value": "@dataset().SistemaDeArchivos",
+					"type": "Expression"
+				}
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
