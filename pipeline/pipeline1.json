@@ -68,26 +68,19 @@
 							"userProperties": [],
 							"typeProperties": {
 								"source": {
-									"type": "AzureSqlSource",
-									"queryTimeout": "02:00:00",
-									"partitionOption": "None"
+									"type": "ParquetSource",
+									"storeSettings": {
+										"type": "AzureBlobFSReadSettings",
+										"recursive": true,
+										"enablePartitionDiscovery": false
+									}
 								},
 								"enableStaging": false
 							},
 							"inputs": [
 								{
-									"referenceName": "DataSetSQL",
-									"type": "DatasetReference",
-									"parameters": {
-										"Tabla": {
-											"value": "@item()['TABLE_NAME']",
-											"type": "Expression"
-										},
-										"Esquema": {
-											"value": "@pipeline().parameters.esquemadeconsulta",
-											"type": "Expression"
-										}
-									}
+									"referenceName": "DataSetParquet",
+									"type": "DatasetReference"
 								}
 							]
 						}
@@ -97,6 +90,9 @@
 		],
 		"parameters": {
 			"esquemadeconsulta": {
+				"type": "string"
+			},
+			"sistemadearchivosdestino": {
 				"type": "string"
 			}
 		},
