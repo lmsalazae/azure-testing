@@ -1,7 +1,7 @@
 {
 	"name": "ClimaSMN",
 	"properties": {
-		"description": "Excel historico Clima Coatza",
+		"description": "Excel histórico Clima Coatza",
 		"activities": [
 			{
 				"name": "Copy data1",
@@ -24,12 +24,34 @@
 							"enablePartitionDiscovery": false
 						}
 					},
-					"enableStaging": false
+					"sink": {
+						"type": "AzureSqlSink",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
 				},
 				"inputs": [
 					{
 						"referenceName": "Excel1",
 						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DataSetSQL",
+						"type": "DatasetReference",
+						"parameters": {
+							"Tabla": "ClimaCoa"
+						}
 					}
 				]
 			}
