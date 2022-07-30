@@ -134,10 +134,12 @@
 		],
 		"parameters": {
 			"EsquemaDeConsulta": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "SalesLT"
 			},
 			"SistemaDeArchivosDestino": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "fsdiplomado"
 			}
 		},
 		"annotations": []
