@@ -28,8 +28,8 @@
 						"referenceName": "DataSetSql",
 						"type": "DatasetReference",
 						"parameters": {
-							"Tabla": "1",
-							"Esquema": "2"
+							"Tabla": "SalesLT",
+							"Esquema": "fsdiplomado"
 						}
 					},
 					"firstRowOnly": false
