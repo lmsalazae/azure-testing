@@ -102,7 +102,18 @@
 							"outputs": [
 								{
 									"referenceName": "Parquet1",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"SistemaArchivos": {
+											"value": "Carlos/@{item()['TABLE_NAME']}",
+											"type": "Expression"
+										},
+										"Direccion": "Carlos/@{item()['TABLE_NAME']}",
+										"Nombrearchivo": {
+											"value": "@{item()['TABLE_NAME']}.parquet",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
