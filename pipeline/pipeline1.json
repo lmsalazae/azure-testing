@@ -105,7 +105,21 @@
 							"outputs": [
 								{
 									"referenceName": "DataSetParquet",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"SistemaDeArchivos": {
+											"value": "@pipeline().parameters.SistemaDeArchivosDestino",
+											"type": "Expression"
+										},
+										"Direccion": {
+											"value": "JLCabrera/@{item()['TABLE_NAME']}",
+											"type": "Expression"
+										},
+										"NombreDeArchivo": {
+											"value": "@{item()['TABLE_NAME']}.parquet",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
