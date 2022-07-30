@@ -1,0 +1,20 @@
+{
+	"name": "Excel1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ServicioVinculadoDataLake",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "HR 202.xlsx",
+				"folderPath": "Ari",
+				"fileSystem": "fsdiplomado"
+			}
+		},
+		"schema": []
+	}
+}
