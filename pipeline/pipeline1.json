@@ -68,12 +68,9 @@
 							"userProperties": [],
 							"typeProperties": {
 								"source": {
-									"type": "ParquetSource",
-									"storeSettings": {
-										"type": "AzureBlobFSReadSettings",
-										"recursive": true,
-										"enablePartitionDiscovery": false
-									}
+									"type": "AzureSqlSource",
+									"queryTimeout": "02:00:00",
+									"partitionOption": "None"
 								},
 								"sink": {
 									"type": "ParquetSink",
@@ -88,22 +85,8 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "DataSetParquet",
-									"type": "DatasetReference",
-									"parameters": {
-										"Sistemadearchivos": {
-											"value": "@pipeline().parameters.sistemadearchivosdestino",
-											"type": "Expression"
-										},
-										"Direccion": {
-											"value": "Ramiro/@{item()['TABLE_NAME']}",
-											"type": "Expression"
-										},
-										"NombredeArchivo": {
-											"value": "@{item()['TABLE_NAME']}.parquet",
-											"type": "Expression"
-										}
-									}
+									"referenceName": "DataSetSQL",
+									"type": "DatasetReference"
 								}
 							],
 							"outputs": [
@@ -133,7 +116,8 @@
 		],
 		"parameters": {
 			"esquemadeconsulta": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "SalesLt"
 			},
 			"sistemadearchivosdestino": {
 				"type": "string"
