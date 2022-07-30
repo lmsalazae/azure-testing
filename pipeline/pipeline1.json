@@ -75,6 +75,15 @@
 										"enablePartitionDiscovery": false
 									}
 								},
+								"sink": {
+									"type": "ParquetSink",
+									"storeSettings": {
+										"type": "AzureBlobFSWriteSettings"
+									},
+									"formatSettings": {
+										"type": "ParquetWriteSettings"
+									}
+								},
 								"enableStaging": false
 							},
 							"inputs": [
@@ -91,6 +100,26 @@
 											"type": "Expression"
 										},
 										"NombredeArchivo": {
+											"value": "@{item()['TABLE_NAME']}.parquet",
+											"type": "Expression"
+										}
+									}
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "Parquet1",
+									"type": "DatasetReference",
+									"parameters": {
+										"FileSystem": {
+											"value": "@pipeline().parameters.sistemadearchivosdestino",
+											"type": "Expression"
+										},
+										"FolderPath": {
+											"value": "Ramiro/@{item()['TABLE_NAME']}",
+											"type": "Expression"
+										},
+										"FileName": {
 											"value": "@{item()['TABLE_NAME']}.parquet",
 											"type": "Expression"
 										}
