@@ -109,11 +109,11 @@
 											"type": "Expression"
 										},
 										"Direccion": {
-											"value": "David/@{item()['TABLE NAME']}",
+											"value": "David/@{item()['TABLE_NAME']}",
 											"type": "Expression"
 										},
 										"NombreArchivo": {
-											"value": "@{item()['TABLE NAME']}.PARQUET",
+											"value": "@{item()['TABLE_NAME']}.PARQUET",
 											"type": "Expression"
 										}
 									}
