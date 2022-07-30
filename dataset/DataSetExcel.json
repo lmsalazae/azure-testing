@@ -14,7 +14,8 @@
 				"fileName": "30 de julio 2022 GAS NATURAL.xlsx",
 				"folderPath": "Carlos",
 				"fileSystem": "fsdiplomado"
-			}
+			},
+			"firstRowAsHeader": true
 		},
 		"schema": [
 			{
