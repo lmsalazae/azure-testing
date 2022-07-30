@@ -98,6 +98,9 @@
 		"parameters": {
 			"EsquemaConsulta": {
 				"type": "string"
+			},
+			"SistemaArchivosdestino": {
+				"type": "string"
 			}
 		},
 		"annotations": []
