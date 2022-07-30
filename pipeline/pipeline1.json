@@ -98,6 +98,9 @@
 		"parameters": {
 			"Esquemadeconsulta": {
 				"type": "string"
+			},
+			"Sistemadearchivodestino": {
+				"type": "string"
 			}
 		},
 		"annotations": []
