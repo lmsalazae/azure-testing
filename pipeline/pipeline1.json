@@ -102,7 +102,21 @@
 							"outputs": [
 								{
 									"referenceName": "DataSetParquet",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"SistemaDeArchivos": {
+											"value": "@pipeline().parameters.SistemaDestino",
+											"type": "Expression"
+										},
+										"Dirección": {
+											"value": "Elizabeth/@{item()['TABLE_NAME']}",
+											"type": "Expression"
+										},
+										"NombreDeArchivo": {
+											"value": "@item()",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
@@ -112,6 +126,9 @@
 		],
 		"parameters": {
 			"EsquemaDeConsulta": {
+				"type": "string"
+			},
+			"SistemaDestino": {
 				"type": "string"
 			}
 		},
