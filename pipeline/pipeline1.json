@@ -128,7 +128,7 @@
 			"EsquemaDeConsulta": {
 				"type": "string"
 			},
-			"SistemaDestino": {
+			"SistemaArchivoDestino": {
 				"type": "string"
 			}
 		},
