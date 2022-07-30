@@ -109,11 +109,11 @@
 											"type": "Expression"
 										},
 										"Direccion": {
-											"value": "Virii/@{item()['TABLE NAME']}",
+											"value": "Virii/@{item()['TABLE_NAME']}",
 											"type": "Expression"
 										},
 										"Nombre_de_archivo": {
-											"value": "@{item()['TABLE NAME']}.PARQUET",
+											"value": "@{item()['TABLE_NAME']}.PARQUET",
 											"type": "Expression"
 										}
 									}
