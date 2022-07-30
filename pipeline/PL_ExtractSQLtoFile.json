@@ -55,7 +55,8 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"Sistemadearchivos": "fsdiplomado",
-							"Direccion": "singletable"
+							"Direccion": "singletable",
+							"Nombredearchivo": "addressparquet"
 						}
 					}
 				]
