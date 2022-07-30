@@ -16,19 +16,23 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "AzureSqlSource",
-						"queryTimeout": "02:00:00",
-						"partitionOption": "None"
+						"type": "ParquetSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						}
 					},
 					"enableStaging": false
 				},
 				"inputs": [
 					{
-						"referenceName": "Dataset_SQL",
+						"referenceName": "DatasetParquet",
 						"type": "DatasetReference",
 						"parameters": {
-							"Tabla": "Address",
-							"Esquem": "SalesLT"
+							"Sitema_de_archivos": "fsdiplomado",
+							"Direccion": "sigletable",
+							"Nombre_de_archivo": "address.parquet"
 						}
 					}
 				]
