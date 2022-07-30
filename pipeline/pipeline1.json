@@ -116,6 +116,9 @@
 		"parameters": {
 			"EsquemaDeConsulta": {
 				"type": "string"
+			},
+			"SistemaDeArchivosDestino": {
+				"type": "string"
 			}
 		},
 		"annotations": []
