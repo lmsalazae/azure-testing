@@ -80,7 +80,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"Tabla": {
-											"value": "@item()[\"TABLE_NAME\"]",
+											"value": "@item()['TABLE_NAME']",
 											"type": "Expression"
 										},
 										"Esquema": {
