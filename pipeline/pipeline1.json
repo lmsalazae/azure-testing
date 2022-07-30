@@ -105,7 +105,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"SistemaDeArchivos": {
-											"value": "@pipeline().parameters.SistemaDestino",
+											"value": "@pipeline().parameters.SistemaArchivoDestino",
 											"type": "Expression"
 										},
 										"Dirección": {
