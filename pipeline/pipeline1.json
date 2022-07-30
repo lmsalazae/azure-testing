@@ -72,6 +72,15 @@
 									"queryTimeout": "02:00:00",
 									"partitionOption": "None"
 								},
+								"sink": {
+									"type": "ParquetSink",
+									"storeSettings": {
+										"type": "AzureBlobFSWriteSettings"
+									},
+									"formatSettings": {
+										"type": "ParquetWriteSettings"
+									}
+								},
 								"enableStaging": false
 							},
 							"inputs": [
@@ -85,6 +94,26 @@
 										},
 										"Esquema": {
 											"value": "@pipeline().parameters.EsquemaConsulta",
+											"type": "Expression"
+										}
+									}
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "DataSetParquet",
+									"type": "DatasetReference",
+									"parameters": {
+										"SistemaArchivos": {
+											"value": "@pipeline().parameters.SistemaArchivosdestino",
+											"type": "Expression"
+										},
+										"Direccion": {
+											"value": "David/@{item()['TABLE NAME']}",
+											"type": "Expression"
+										},
+										"NombreArchivo": {
+											"value": "@{item()['TABLE NAME']}.PARQUET",
 											"type": "Expression"
 										}
 									}
