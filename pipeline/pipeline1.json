@@ -75,7 +75,12 @@
 								"sink": {
 									"type": "ParquetSink",
 									"storeSettings": {
-										"type": "AzureBlobFSWriteSettings"
+										"type": "AzureBlobFSWriteSettings",
+										"metadata": [
+											{
+												"value": ""
+											}
+										]
 									},
 									"formatSettings": {
 										"type": "ParquetWriteSettings"
@@ -126,7 +131,8 @@
 		],
 		"parameters": {
 			"Esquemadeconsulta": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "SalesLT"
 			},
 			"Sistemadearchivodestino": {
 				"type": "string"
