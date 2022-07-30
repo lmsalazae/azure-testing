@@ -2,7 +2,7 @@
 	"name": "DataSetParquet",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "ServicioVinculadoDataLake",
+			"referenceName": "AzureDataLakeStorage2",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
