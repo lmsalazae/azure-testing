@@ -107,6 +107,14 @@
 										"Sistemadearchivos": {
 											"value": "@pipeline().parameters.Sistemadearchivodestino",
 											"type": "Expression"
+										},
+										"Direccion": {
+											"value": "Ari/@{item()['TABLE_NAME']}",
+											"type": "Expression"
+										},
+										"Nombredearchivo": {
+											"value": "@{item()['TABLE_NAME']}.PARQUET",
+											"type": "Expression"
 										}
 									}
 								}
