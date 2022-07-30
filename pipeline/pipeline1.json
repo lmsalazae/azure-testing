@@ -80,7 +80,21 @@
 							"inputs": [
 								{
 									"referenceName": "DataSetParquet",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"Sistemadearchivos": {
+											"value": "@pipeline().parameters.sistemadearchivosdestino",
+											"type": "Expression"
+										},
+										"Direccion": {
+											"value": "Ramiro/@{item()['TABLE_NAME']}",
+											"type": "Expression"
+										},
+										"NombredeArchivo": {
+											"value": "@{item()['TABLE_NAME']}.parquet",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
