@@ -37,220 +37,240 @@
 						"mappings": [
 							{
 								"source": {
+									"name": "Secuencia",
 									"type": "String",
-									"ordinal": 1
+									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Columnundefined",
+									"name": "Secuencia",
 									"type": "String",
 									"physicalType": "String"
 								}
 							},
 							{
 								"source": {
+									"name": "Date / Time",
 									"type": "String",
-									"ordinal": 2
+									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Columnundefined",
+									"name": "Date / Time",
 									"type": "String",
 									"physicalType": "String"
 								}
 							},
 							{
 								"source": {
+									"name": "Local Seq No",
 									"type": "String",
-									"ordinal": 3
+									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Columnundefined",
+									"name": "Local Seq No",
 									"type": "String",
 									"physicalType": "String"
 								}
 							},
 							{
 								"source": {
+									"name": "Global Seq No",
 									"type": "String",
-									"ordinal": 4
+									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Columnundefined",
+									"name": "Global Seq No",
 									"type": "String",
 									"physicalType": "String"
 								}
 							},
 							{
 								"source": {
+									"name": "RUN TIME",
 									"type": "String",
-									"ordinal": 5
+									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Columnundefined",
+									"name": "RUN TIME",
 									"type": "String",
 									"physicalType": "String"
 								}
 							},
 							{
 								"source": {
+									"name": "EFM UPTIME",
 									"type": "String",
-									"ordinal": 6
+									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Columnundefined",
+									"name": "EFM UPTIME",
 									"type": "String",
 									"physicalType": "String"
 								}
 							},
 							{
 								"source": {
+									"name": "AVG HZ",
 									"type": "String",
-									"ordinal": 7
+									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Columnundefined",
+									"name": "AVG HZ",
 									"type": "String",
 									"physicalType": "String"
 								}
 							},
 							{
 								"source": {
+									"name": "AVG PF",
 									"type": "String",
-									"ordinal": 8
+									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Columnundefined",
+									"name": "AVG PF",
 									"type": "String",
 									"physicalType": "String"
 								}
 							},
 							{
 								"source": {
+									"name": "AVG TF",
 									"type": "String",
-									"ordinal": 9
+									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Columnundefined",
+									"name": "AVG TF",
 									"type": "String",
 									"physicalType": "String"
 								}
 							},
 							{
 								"source": {
+									"name": "AVG SPG",
 									"type": "String",
-									"ordinal": 10
+									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Columnundefined",
+									"name": "AVG SPG",
 									"type": "String",
 									"physicalType": "String"
 								}
 							},
 							{
 								"source": {
+									"name": "AVG BTU",
 									"type": "String",
-									"ordinal": 11
+									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Columnundefined",
+									"name": "AVG BTU",
 									"type": "String",
 									"physicalType": "String"
 								}
 							},
 							{
 								"source": {
+									"name": "ACF",
 									"type": "String",
-									"ordinal": 12
+									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Columnundefined",
+									"name": "ACF",
 									"type": "String",
 									"physicalType": "String"
 								}
 							},
 							{
 								"source": {
+									"name": "MMPC (PMX)",
 									"type": "String",
-									"ordinal": 13
+									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Columnundefined",
+									"name": "MMPC (PMX)",
 									"type": "String",
 									"physicalType": "String"
 								}
 							},
 							{
 								"source": {
+									"name": "CALORIA MCAL",
 									"type": "String",
-									"ordinal": 14
+									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Columnundefined",
+									"name": "CALORIA MCAL",
 									"type": "String",
 									"physicalType": "String"
 								}
 							},
 							{
 								"source": {
+									"name": "# EVENTS",
 									"type": "String",
-									"ordinal": 15
+									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Columnundefined",
+									"name": "# EVENTS",
 									"type": "String",
 									"physicalType": "String"
 								}
 							},
 							{
 								"source": {
+									"name": "# ALARMS",
 									"type": "String",
-									"ordinal": 16
+									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Columnundefined",
+									"name": "# ALARMS",
 									"type": "String",
 									"physicalType": "String"
 								}
 							},
 							{
 								"source": {
+									"name": "ID METER",
 									"type": "String",
-									"ordinal": 17
+									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Columnundefined",
+									"name": "ID METER",
 									"type": "String",
 									"physicalType": "String"
 								}
 							},
 							{
 								"source": {
+									"name": "QUALITY",
 									"type": "String",
-									"ordinal": 18
+									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Columnundefined",
+									"name": "QUALITY",
 									"type": "String",
 									"physicalType": "String"
 								}
 							},
 							{
 								"source": {
+									"name": "MMPCS (STD)",
 									"type": "String",
-									"ordinal": 19
+									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Columnundefined",
+									"name": "MMPCS (STD)",
 									"type": "String",
 									"physicalType": "String"
 								}
 							},
 							{
 								"source": {
+									"name": "MMBTU",
 									"type": "String",
-									"ordinal": 20
+									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Columnundefined",
+									"name": "MMBTU",
 									"type": "String",
 									"physicalType": "String"
 								}
