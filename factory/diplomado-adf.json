@@ -1,0 +1,9 @@
+{
+	"name": "diplomado-adf",
+	"location": "brazilsouth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "044750ec-e956-4c3b-8055-2cc007c3825a",
+		"tenantId": "592b5396-bf52-4b35-a844-d5ab522c3666"
+	}
+}
