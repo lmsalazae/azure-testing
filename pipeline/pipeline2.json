@@ -69,11 +69,23 @@
 									"referenceName": "Dataflow2SQL",
 									"type": "DataFlowReference",
 									"parameters": {
-										"SistemaArchivos": "'fsdiplomado'",
-										"DirectorioOrigen": "'Virii/Product'",
-										"NombreArchivo": "'Product*.PARQUET'",
+										"SistemaArchivos": {
+											"value": "'@{pipeline().parameters.SistemasArchivosPipe}'",
+											"type": "Expression"
+										},
+										"DirectorioOrigen": {
+											"value": "'Viri/@{item()['name']}'",
+											"type": "Expression"
+										},
+										"NombreArchivo": {
+											"value": "'@{item()['name']}*.parquet'",
+											"type": "Expression"
+										},
 										"NombreTabla": "'clean_Producto'",
-										"EsquemaDestino": "'SalesLT'"
+										"EsquemaDestino": {
+											"value": "'@{pipeline().parameters.EsquemaDestinoPipe}'",
+											"type": "Expression"
+										}
 									}
 								},
 								"compute": {
