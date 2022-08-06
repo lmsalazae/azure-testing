@@ -64,6 +64,32 @@
 							},
 							"userProperties": [],
 							"typeProperties": {
+								"dataflow": {
+									"referenceName": "DataFlowToSQL",
+									"type": "DataFlowReference",
+									"parameters": {
+										"SistemaDeArchivos": {
+											"value": "'@{pipeline().parameters.SistemaDeArchivosPipe}'",
+											"type": "Expression"
+										},
+										"DirectorioOrigen": {
+											"value": "'@{Elizabeth/@(item()['name'])}'",
+											"type": "Expression"
+										},
+										"NombreDeArchivo": {
+											"value": "'@{(item()['name'])^.parquet}'",
+											"type": "Expression"
+										},
+										"EsquemaDestino": {
+											"value": "'@{pipeline().parameters.EsquemaDestinoPipe}'",
+											"type": "Expression"
+										},
+										"NombreDeTabla": {
+											"value": "'@{Clean_@(item()['name'])}'",
+											"type": "Expression"
+										}
+									}
+								},
 								"compute": {
 									"coreCount": 8,
 									"computeType": "General"
