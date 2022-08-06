@@ -29,7 +29,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"tabla": "1",
-							"esquema": "2"
+							"esquema": "3"
 						}
 					},
 					"firstRowOnly": false
