@@ -12,8 +12,16 @@
 					"name": "source1"
 				}
 			],
-			"sinks": [],
-			"transformations": [],
+			"sinks": [
+				{
+					"name": "sink1"
+				}
+			],
+			"transformations": [
+				{
+					"name": "derivedColumn1"
+				}
+			],
 			"scriptLines": [
 				"parameters{",
 				"     SistemaDeArchivos as string ('fsdiplomado'),",
@@ -25,7 +33,15 @@
 				"     ignoreNoFilesFound: false,",
 				"     format: 'parquet',",
 				"     fileSystem: ($SistemaDeArchivos),",
-				"     wildcardPaths:[(concat($Directorio,'/',$Archivo))]) ~> source1"
+				"     wildcardPaths:[(concat($Directorio,'/',$Archivo))]) ~> source1",
+				"source1 derive(each(match(type=='string'), $$ = coalesce($$,'sin datos'))) ~> derivedColumn1",
+				"derivedColumn1 sink(validateSchema: false,",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     store: 'cache',",
+				"     format: 'inline',",
+				"     output: false,",
+				"     saveOrder: 1) ~> sink1"
 			]
 		}
 	}
