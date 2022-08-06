@@ -17,14 +17,15 @@
 			"transformations": [],
 			"scriptLines": [
 				"parameters{",
-				"     SistemaArchivod as string ('fsdiplomado'),",
+				"     SistemaArchivos as string ('fsdiplomado'),",
 				"     DirectorioOrigen as string ('Virii/Address'),",
 				"     NombreArchivo as string ('Address*.parquet')",
 				"}",
 				"source(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false,",
-				"     format: 'parquet') ~> source1"
+				"     format: 'parquet',",
+				"     fileSystem: ($SistemaArchivod)) ~> source1"
 			]
 		}
 	}
