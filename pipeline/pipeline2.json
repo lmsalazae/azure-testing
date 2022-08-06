@@ -16,10 +16,18 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "AzureSqlTable1",
-						"type": "DatasetReference"
+						"referenceName": "DataSetMetadata",
+						"type": "DatasetReference",
+						"parameters": {
+							"SistemaArchivos": "fsdiplomado",
+							"Directorio": "Carlos"
+						}
 					},
-					"fieldList": []
+					"fieldList": [],
+					"storeSettings": {
+						"type": "AzureBlobFSReadSettings",
+						"enablePartitionDiscovery": false
+					}
 				}
 			}
 		],
