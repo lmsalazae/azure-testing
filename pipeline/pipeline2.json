@@ -79,6 +79,10 @@
 			"SistemaDeArchivosPipe": {
 				"type": "string",
 				"defaultValue": "fsdiplomado"
+			},
+			"EsquemaDestinoPipe": {
+				"type": "string",
+				"defaultValue": "'salesLT'"
 			}
 		},
 		"variables": {
