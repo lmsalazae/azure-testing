@@ -11,9 +11,6 @@
 			},
 			"Directorio": {
 				"type": "string"
-			},
-			"Archivo": {
-				"type": "string"
 			}
 		},
 		"annotations": [],
