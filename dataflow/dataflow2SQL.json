@@ -26,7 +26,7 @@
 				"parameters{",
 				"     sistemadearchivos as string ('fsdiplomado'),",
 				"     directorioorigen as string ('Ari/Address'),",
-				"     nombredearchivo as string ('Address*.parquet')",
+				"     nombredearchivo as string ('Address*.PARQUET')",
 				"}",
 				"source(allowSchemaDrift: true,",
 				"     validateSchema: false,",
