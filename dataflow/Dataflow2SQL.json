@@ -15,6 +15,10 @@
 			],
 			"sinks": [
 				{
+					"linkedService": {
+						"referenceName": "ServiciovinculadoSQL",
+						"type": "LinkedServiceReference"
+					},
 					"name": "sink1"
 				}
 			],
@@ -27,7 +31,9 @@
 				"parameters{",
 				"     SistemaArchivos as string ('fsdiplomado'),",
 				"     DirectorioOrigen as string ('Virii/Product'),",
-				"     NombreArchivo as string ('Product*.PARQUET')",
+				"     NombreArchivo as string ('Product*.PARQUET'),",
+				"     NombreTabla as string ('clean_Producto'),",
+				"     EsquemaDestino as string ('SalesLT')",
 				"}",
 				"source(allowSchemaDrift: true,",
 				"     validateSchema: false,",
@@ -42,13 +48,20 @@
 				"          ColumnaPrueba = 'Viri',",
 				"          ClumnaPrueba2 = currentTimestamp(),",
 				"          ColumnaPrueba3 = 900) ~> derivedColumn1",
-				"derivedColumn1 sink(validateSchema: false,",
+				"derivedColumn1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'table',",
+				"     store: 'sqlserver',",
+				"     schemaName: ($EsquemaDestino),",
+				"     tableName: ($NombreTabla),",
+				"     insertable: true,",
+				"     updateable: false,",
+				"     deletable: false,",
+				"     upsertable: false,",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
-				"     store: 'cache',",
-				"     format: 'inline',",
-				"     output: false,",
-				"     saveOrder: 1) ~> sink1"
+				"     saveOrder: 1,",
+				"     errorHandlingOption: 'stopOnFirstError') ~> sink1"
 			]
 		}
 	}
