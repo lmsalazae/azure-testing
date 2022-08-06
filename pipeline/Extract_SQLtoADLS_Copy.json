@@ -48,15 +48,7 @@
 										"type": "ParquetWriteSettings"
 									}
 								},
-								"enableStaging": false,
-								"translator": {
-									"type": "TabularTranslator",
-									"typeConversion": true,
-									"typeConversionSettings": {
-										"allowDataTruncation": true,
-										"treatBooleanAsNumber": false
-									}
-								}
+								"enableStaging": false
 							},
 							"inputs": [
 								{
@@ -69,23 +61,6 @@
 										},
 										"Table": {
 											"value": "@item()['TABLE_NAME']",
-											"type": "Expression"
-										}
-									}
-								}
-							],
-							"outputs": [
-								{
-									"referenceName": "Parquet1",
-									"type": "DatasetReference",
-									"parameters": {
-										"sistemadearchivos": "container-name",
-										"directorio": {
-											"value": "landing/@{item()['TABLE_NAME']}",
-											"type": "Expression"
-										},
-										"FileName": {
-											"value": "@{item()['TABLE_NAME']}-@{convertFromUtc(utcNow(), 'Central Standard Time')}.parquet",
 											"type": "Expression"
 										}
 									}
