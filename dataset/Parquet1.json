@@ -6,13 +6,10 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"FileSystem": {
+			"sistemadearchivos": {
 				"type": "string"
 			},
-			"FolderPath": {
-				"type": "string"
-			},
-			"FileName": {
+			"directorio": {
 				"type": "string"
 			}
 		},
@@ -21,16 +18,12 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": {
-					"value": "@dataset().FileName",
-					"type": "Expression"
-				},
 				"folderPath": {
-					"value": "@dataset().FolderPath",
+					"value": "@dataset().directorio",
 					"type": "Expression"
 				},
 				"fileSystem": {
-					"value": "@dataset().FileSystem",
+					"value": "@dataset().sistemadearchivos",
 					"type": "Expression"
 				}
 			},
