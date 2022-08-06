@@ -29,8 +29,8 @@
 			"scriptLines": [
 				"parameters{",
 				"     SistemaDeArchivos as string ('fsdiplomado'),",
-				"     DirectorioOrigen as string ('Elizabeth/Addres'),",
-				"     NombreDeArchivo as string ('Address*.parquet')",
+				"     DirectorioOrigen as string ('Elizabeth/Product'),",
+				"     NombreDeArchivo as string ('Product*.parquet')",
 				"}",
 				"source(allowSchemaDrift: true,",
 				"     validateSchema: false,",
