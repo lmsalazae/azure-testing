@@ -15,6 +15,10 @@
 			],
 			"sinks": [
 				{
+					"linkedService": {
+						"referenceName": "ServicioLink01",
+						"type": "LinkedServiceReference"
+					},
 					"name": "sink1"
 				}
 			],
@@ -40,13 +44,20 @@
 				"          each(match(name=='Weight'), $$ = coalesce(toDecimal($$),toDecimal('0.0'))),",
 				"          each(match(type=='timestamp'), $$ = coalesce($$,toTimestamp('1990-01-01 00:00:00.000'))),",
 				"          ColumnaPrueba = currentTimestamp()) ~> derivedColumn1",
-				"derivedColumn1 sink(validateSchema: false,",
+				"derivedColumn1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'table',",
+				"     store: 'sqlserver',",
+				"     schemaName: '',",
+				"     tableName: '',",
+				"     insertable: true,",
+				"     updateable: false,",
+				"     deletable: false,",
+				"     upsertable: false,",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
-				"     store: 'cache',",
-				"     format: 'inline',",
-				"     output: false,",
-				"     saveOrder: 1) ~> sink1"
+				"     saveOrder: 1,",
+				"     errorHandlingOption: 'stopOnFirstError') ~> sink1"
 			]
 		}
 	}
