@@ -15,6 +15,11 @@
 			"sinks": [],
 			"transformations": [],
 			"scriptLines": [
+				"parameters{",
+				"     SistemaDeArchivos as string ('fsdiplomado'),",
+				"     DirectorioOrigen as string ('Elizabeth/Addres'),",
+				"     NombreDeArchivo as string ('Addres*.parquet')",
+				"}",
 				"source(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false,",
