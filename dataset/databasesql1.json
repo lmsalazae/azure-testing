@@ -1,0 +1,20 @@
+{
+	"name": "databasesql1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "serviciovinculadosql1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"tabla": {
+				"type": "string"
+			},
+			"esquema": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}
