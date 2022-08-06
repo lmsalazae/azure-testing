@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "DatasetGetMetadata",
+						"referenceName": "Parquet2",
 						"type": "DatasetReference"
 					},
 					"fieldList": [],
