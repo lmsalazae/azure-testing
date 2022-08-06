@@ -1,0 +1,29 @@
+{
+	"name": "dataset1parquer",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "servicovinculadodatalake1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"sistemadearchivos": {
+				"type": "string"
+			},
+			"direccion": {
+				"type": "string"
+			},
+			"nombredearchivo": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
