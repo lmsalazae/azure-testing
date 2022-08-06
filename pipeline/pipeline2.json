@@ -20,7 +20,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"SistemaArchivos": "fsdiplomado",
-							"Directorio": "Eduardo"
+							"Directorio": "Elizabeth"
 						}
 					},
 					"fieldList": [
@@ -59,7 +59,7 @@
 							"typeProperties": {
 								"variableName": "Validacion",
 								"value": {
-									"value": "@item()",
+									"value": "@item()['name']",
 									"type": "Expression"
 								}
 							}
