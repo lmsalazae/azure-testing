@@ -4,11 +4,27 @@
 		"description": "Flujo de datos a SQL",
 		"type": "MappingDataFlow",
 		"typeProperties": {
-			"sources": [],
+			"sources": [
+				{
+					"linkedService": {
+						"referenceName": "SevicioVinculadoDataLake",
+						"type": "LinkedServiceReference"
+					},
+					"name": "source1"
+				}
+			],
 			"sinks": [],
 			"transformations": [],
 			"scriptLines": [
-				""
+				"parameters{",
+				"     SistemaArchivos as string ('fsdiplomado'),",
+				"     DirectotioOrigen as string ('Elizabeth/Address'),",
+				"     NombreArchivo as string ('Address*.parket')",
+				"}",
+				"source(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false,",
+				"     format: 'parquet') ~> source1"
 			]
 		}
 	}
