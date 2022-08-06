@@ -52,22 +52,50 @@
 					"isSequential": true,
 					"activities": [
 						{
-							"name": "Set variable1",
-							"type": "SetVariable",
+							"name": "Data flow1",
+							"type": "ExecuteDataFlow",
 							"dependsOn": [],
+							"policy": {
+								"timeout": "1.00:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
 							"userProperties": [],
 							"typeProperties": {
-								"variableName": "Validacion",
-								"value": {
-									"value": "@item()['name']",
-									"type": "Expression"
-								}
+								"dataflow": {
+									"referenceName": "DataFlowtoSQL",
+									"type": "DataFlowReference",
+									"parameters": {
+										"SistemArchivos": "'fsdiplomado'",
+										"DirectorioOrigen": "'Carlos/Product'",
+										"NombreArchivo": "'Product*.parquet'",
+										"Esquemadestino": "'SalesLT'",
+										"NombreTabla": "'Clean_Producto'"
+									}
+								},
+								"compute": {
+									"coreCount": 8,
+									"computeType": "General"
+								},
+								"traceLevel": "Fine"
 							}
 						}
 					]
 				}
 			}
 		],
+		"parameters": {
+			"SistemaArchivosPipe": {
+				"type": "string",
+				"defaultValue": "fsdiplomado"
+			},
+			"EsquemadestinoPipe": {
+				"type": "string",
+				"defaultValue": "SalesLT"
+			}
+		},
 		"variables": {
 			"Validacion": {
 				"type": "String"
