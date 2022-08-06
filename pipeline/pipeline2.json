@@ -87,6 +87,16 @@
 				}
 			}
 		],
+		"parameters": {
+			"SistemasArchivosPipe": {
+				"type": "string",
+				"defaultValue": "fsdiplomado"
+			},
+			"EsquemaDestinoPipe": {
+				"type": "string",
+				"defaultValue": "SalesLT"
+			}
+		},
 		"variables": {
 			"Validacion": {
 				"type": "String"
