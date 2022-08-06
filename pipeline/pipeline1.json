@@ -17,6 +17,10 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
+						"sqlReaderQuery": {
+							"value": "select\ntable_name\nfrom [information_schema].[tables]\nwhere table_schema = ´´",
+							"type": "Expression"
+						},
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
@@ -28,6 +32,11 @@
 				}
 			}
 		],
+		"parameters": {
+			"esquemadeconsulta": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
