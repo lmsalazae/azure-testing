@@ -13,18 +13,42 @@
 					"name": "source1"
 				}
 			],
-			"sinks": [],
-			"transformations": [],
+			"sinks": [
+				{
+					"name": "sink1",
+					"rejectedDataLinkedService": {
+						"referenceName": "SevicioVinculadoDataLake",
+						"type": "LinkedServiceReference"
+					}
+				}
+			],
+			"transformations": [
+				{
+					"name": "derivedColumn1"
+				}
+			],
 			"scriptLines": [
 				"parameters{",
 				"     SistemaArchivos as string ('fsdiplomado'),",
-				"     DirectotioOrigen as string ('Elizabeth/Address'),",
-				"     NombreArchivo as string ('Address*.parket')",
+				"     DirectotioOrigen as string ('Carlos/Product'),",
+				"     NombreArchivo as string ('Product*.parquet')",
 				"}",
 				"source(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false,",
-				"     format: 'parquet') ~> source1"
+				"     format: 'parquet',",
+				"     fileSystem: ($SistemaArchivos),",
+				"     wildcardPaths:[(concat($DirectotioOrigen, '/',$NombreArchivo))]) ~> source1",
+				"source1 derive(each(match(type=='string'), $$ = coalesce($$,'sin datos')),",
+				"          each(match(type=='integer'), $$ = coalesce($$,toInteger(0))),",
+				"          each(match(name=='Weight'), $$ = coalesce(toDecimal($$),toDecimal('0.0')))) ~> derivedColumn1",
+				"derivedColumn1 sink(validateSchema: false,",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     store: 'cache',",
+				"     format: 'inline',",
+				"     output: false,",
+				"     saveOrder: 1) ~> sink1"
 			]
 		}
 	}
