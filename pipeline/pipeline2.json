@@ -17,9 +17,15 @@
 				"typeProperties": {
 					"dataset": {
 						"referenceName": "DataSetGetMetadada",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"SistemaDeArchivos": "fsdiplomado",
+							"Directorio": "Virii"
+						}
 					},
-					"fieldList": [],
+					"fieldList": [
+						"childItems"
+					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
 						"enablePartitionDiscovery": false
