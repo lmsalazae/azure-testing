@@ -23,7 +23,9 @@
 				"source(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false,",
-				"     format: 'parquet') ~> source1"
+				"     format: 'parquet',",
+				"     fileSystem: ($SistemaDeArchivos),",
+				"     wildcardPaths:[(concat()$DirectorioOrigen,'/',$NombreDeArchivo)]) ~> source1"
 			]
 		}
 	}
