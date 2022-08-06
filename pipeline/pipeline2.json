@@ -17,7 +17,11 @@
 				"typeProperties": {
 					"dataset": {
 						"referenceName": "DataSetGetMetaData",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"SistemaArchivos": "fsdiplomado",
+							"Directorio": "mitz"
+						}
 					},
 					"fieldList": [],
 					"storeSettings": {
