@@ -68,10 +68,22 @@
 									"referenceName": "DataFlowtoSQL",
 									"type": "DataFlowReference",
 									"parameters": {
-										"SistemArchivos": "'fsdiplomado'",
-										"DirectorioOrigen": "'Carlos/Product'",
-										"NombreArchivo": "'Product*.parquet'",
-										"Esquemadestino": "'SalesLT'",
+										"SistemArchivos": {
+											"value": "'@{pipeline().parameters.SistemaArchivosPipe}'",
+											"type": "Expression"
+										},
+										"DirectorioOrigen": {
+											"value": "'Carlos/@{item()['name']}'",
+											"type": "Expression"
+										},
+										"NombreArchivo": {
+											"value": "'@{item()['name']}*.parquet'",
+											"type": "Expression"
+										},
+										"Esquemadestino": {
+											"value": "'@{pipeline().parameters.EsquemadestinoPipe}'",
+											"type": "Expression"
+										},
 										"NombreTabla": "'Clean_Producto'"
 									}
 								},
