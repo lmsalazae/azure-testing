@@ -2,7 +2,7 @@
 	"name": "DataSetGetMetadada",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureDataLakeStorage1",
+			"referenceName": "ServiciovinculadoDATALAKE",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
