@@ -33,7 +33,7 @@
 				"parameters{",
 				"     SistemaDeArchivos as string ('fsdiplomado'),",
 				"     DirectorioOrigen as string ('Elizabeth/Product'),",
-				"     NombreDeArchivo as string ('Product*.parquet'),",
+				"     NombreDeArchivo as string ('Product'),",
 				"     EsquemaDestino as string ('salesLT'),",
 				"     NombreDeTabla as string ('Clean_Product')",
 				"}",
