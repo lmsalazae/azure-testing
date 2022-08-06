@@ -50,10 +50,28 @@
 						"value": "@activity('Get Metadata1').output.childItems",
 						"type": "Expression"
 					},
-					"isSequential": true
+					"isSequential": true,
+					"activities": [
+						{
+							"name": "setvariable",
+							"description": "",
+							"type": "SetVariable",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "Validacion",
+								"value": "@item()['name']"
+							}
+						}
+					]
 				}
 			}
 		],
+		"variables": {
+			"Validacion": {
+				"type": "String"
+			}
+		},
 		"annotations": []
 	}
 }
