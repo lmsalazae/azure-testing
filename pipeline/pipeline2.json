@@ -81,7 +81,10 @@
 											"value": "'@{item()['name']}*.parquet'",
 											"type": "Expression"
 										},
-										"NombreTabla": "'clean_Producto'",
+										"NombreTabla": {
+											"value": "'clean_@{item()['name']}'",
+											"type": "Expression"
+										},
 										"EsquemaDestino": {
 											"value": "'@{pipeline().parameters.EsquemaDestinoPipe}'",
 											"type": "Expression"
