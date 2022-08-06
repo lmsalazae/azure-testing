@@ -23,9 +23,12 @@
 							"Directorio": "mitz"
 						}
 					},
-					"fieldList": [],
+					"fieldList": [
+						"childItems"
+					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
+						"modifiedDatetimeStart": "2022-08-06T00:00:00.743Z",
 						"enablePartitionDiscovery": false
 					}
 				}
