@@ -17,7 +17,11 @@
 				"typeProperties": {
 					"dataset": {
 						"referenceName": "Parquet2",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"filesystem": "container-name",
+							"path": "landing"
+						}
 					},
 					"fieldList": [],
 					"storeSettings": {
