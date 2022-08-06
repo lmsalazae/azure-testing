@@ -109,22 +109,8 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "DataSetParquet",
-									"type": "DatasetReference",
-									"parameters": {
-										"Sistemadearchivos": {
-											"value": "@pipeline().parameters.Sistemadearchivodestino",
-											"type": "Expression"
-										},
-										"Direccion": {
-											"value": "Eduardo/@{item()['TABLE_NAME']}",
-											"type": "Expression"
-										},
-										"Nombredearchivo": {
-											"value": "@{item()['TABLE_NAME']}.parquet",
-											"type": "Expression"
-										}
-									}
+									"referenceName": "Parquet1",
+									"type": "DatasetReference"
 								}
 							]
 						}
