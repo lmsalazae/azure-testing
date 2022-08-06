@@ -25,13 +25,16 @@
 			"transformations": [
 				{
 					"name": "derivedColumn1"
+				},
+				{
+					"name": "ModificarFila1"
 				}
 			],
 			"scriptLines": [
 				"parameters{",
 				"     SistemaArchivos as string ('fsdiplomado'),",
 				"     DirectorioOrigen as string ('Virii/Product'),",
-				"     NombreArchivo as string ('Product*.PARQUET'),",
+				"     NombreArchivo as string ('Product*.parquet'),",
 				"     NombreTabla as string ('clean_Producto'),",
 				"     EsquemaDestino as string ('SalesLT')",
 				"}",
@@ -48,7 +51,8 @@
 				"          ColumnaPrueba = 'Viri',",
 				"          ClumnaPrueba2 = currentTimestamp(),",
 				"          ColumnaPrueba3 = 900) ~> derivedColumn1",
-				"derivedColumn1 sink(allowSchemaDrift: true,",
+				"derivedColumn1 alterRow(upsertIf(true())) ~> ModificarFila1",
+				"ModificarFila1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     format: 'table',",
 				"     store: 'sqlserver',",
@@ -57,7 +61,7 @@
 				"     insertable: true,",
 				"     updateable: false,",
 				"     deletable: false,",
-				"     upsertable: false,",
+				"     upsertable: true,",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
 				"     saveOrder: 1,",
