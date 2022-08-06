@@ -25,6 +25,9 @@
 			"transformations": [
 				{
 					"name": "derivedColumn1"
+				},
+				{
+					"name": "Modificarfila1"
 				}
 			],
 			"scriptLines": [
@@ -46,7 +49,8 @@
 				"          each(match(name=='Weight'), $$ = coalesce(toDecimal($$),toDecimal('0.0'))),",
 				"          each(match(type=='timestamp'), $$ = coalesce($$,toTimestamp('1990-01-01 00:00:00.000'))),",
 				"          ColumnaPrueba = currentTimestamp()) ~> derivedColumn1",
-				"derivedColumn1 sink(allowSchemaDrift: true,",
+				"derivedColumn1 alterRow(upsertIf(true())) ~> Modificarfila1",
+				"Modificarfila1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     format: 'table',",
 				"     store: 'sqlserver',",
@@ -55,7 +59,7 @@
 				"     insertable: true,",
 				"     updateable: false,",
 				"     deletable: false,",
-				"     upsertable: false,",
+				"     upsertable: true,",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
 				"     saveOrder: 1,",
