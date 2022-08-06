@@ -84,7 +84,10 @@
 											"value": "'@{pipeline().parameters.EsquemadestinoPipe}'",
 											"type": "Expression"
 										},
-										"NombreTabla": "'Clean_Producto'"
+										"NombreTabla": {
+											"value": "'Clean_@{item()['name']}'",
+											"type": "Expression"
+										}
 									}
 								},
 								"compute": {
