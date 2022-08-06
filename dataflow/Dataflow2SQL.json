@@ -18,7 +18,11 @@
 					"name": "sink1"
 				}
 			],
-			"transformations": [],
+			"transformations": [
+				{
+					"name": "derivedColumn1"
+				}
+			],
 			"scriptLines": [
 				"parameters{",
 				"     SistemaArchivos as string ('fsdiplomado'),",
@@ -31,7 +35,8 @@
 				"     format: 'parquet',",
 				"     fileSystem: ($SistemaArchivos),",
 				"     wildcardPaths:[(concat($DirectorioOrigen, '/',$NombreArchivo))]) ~> source1",
-				"source1 sink(validateSchema: false,",
+				"source1 derive() ~> derivedColumn1",
+				"derivedColumn1 sink(validateSchema: false,",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
 				"     store: 'cache',",
