@@ -18,7 +18,7 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "select\ntable_name\nfrom [information_schema].[tables]\nwhere table_schema = ´´",
+							"value": "SELECT\nTABLE_NAME\nFROM [INFORMATION_SCHEMA].[tables]\nWHERE TABLE_SCHEMA=´@{pipeline().parameters.esquemadeconsulta}´",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
@@ -26,7 +26,11 @@
 					},
 					"dataset": {
 						"referenceName": "databasesql1",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"tabla": "1",
+							"esquema": "2"
+						}
 					},
 					"firstRowOnly": false
 				}
