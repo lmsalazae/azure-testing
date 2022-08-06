@@ -16,9 +16,9 @@
 			"transformations": [],
 			"scriptLines": [
 				"parameters{",
-				"     sistemadearchivos as string,",
-				"     directorioorigen as string,",
-				"     nombredearchivo as string",
+				"     sistemadearchivos as string ('fsdiplomado'),",
+				"     directorioorigen as string ('Ari/Address'),",
+				"     nombredearchivo as string ('Address*.parquet')",
 				"}",
 				"source(allowSchemaDrift: true,",
 				"     validateSchema: false,",
