@@ -6,7 +6,7 @@
 			"sources": [
 				{
 					"linkedService": {
-						"referenceName": "AzureDataLakeStorage1",
+						"referenceName": "AzureDataLakeStorage2",
 						"type": "LinkedServiceReference"
 					},
 					"name": "source1"
@@ -34,7 +34,9 @@
 				"     format: 'parquet',",
 				"     fileSystem: ($SistemaDeArchivos),",
 				"     wildcardPaths:[(concat($Directorio,'/',$Archivo))]) ~> source1",
-				"source1 derive(each(match(type=='string'), $$ = coalesce($$,'sin datos'))) ~> derivedColumn1",
+				"source1 derive(each(match(type=='string'), $$ = coalesce($$,'sin datos')),",
+				"          each(match(type=='integer'), $$ = coalesce($$,toInteger(0))),",
+				"          each(match(name=='Weight'), $$ = coalesce(toDecimal($$),toDecimal('0.0')))) ~> derivedColumn1",
 				"derivedColumn1 sink(validateSchema: false,",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
