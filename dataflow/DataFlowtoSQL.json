@@ -1,0 +1,15 @@
+{
+	"name": "DataFlowtoSQL",
+	"properties": {
+		"description": "Flujo de datos a SQL",
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [],
+			"sinks": [],
+			"transformations": [],
+			"scriptLines": [
+				""
+			]
+		}
+	}
+}
