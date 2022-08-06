@@ -17,7 +17,11 @@
 				"typeProperties": {
 					"dataset": {
 						"referenceName": "Parquet2",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"SistemaArchivos": "fsdiplomado",
+							"Directorio": "Eduardo"
+						}
 					},
 					"fieldList": [],
 					"storeSettings": {
@@ -27,14 +31,6 @@
 				}
 			}
 		],
-		"parameters": {
-			"Sistemadearchivos": {
-				"type": "string"
-			},
-			"Directorio": {
-				"type": "string"
-			}
-		},
 		"annotations": []
 	}
 }
