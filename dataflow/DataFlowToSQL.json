@@ -30,7 +30,7 @@
 				"parameters{",
 				"     SistemaDeArchivos as string ('fsdiplomado'),",
 				"     DirectorioOrigen as string ('Elizabeth/Addres'),",
-				"     NombreDeArchivo as string ('Addres*.parquet')",
+				"     NombreDeArchivo as string ('Address*.parquet')",
 				"}",
 				"source(allowSchemaDrift: true,",
 				"     validateSchema: false,",
