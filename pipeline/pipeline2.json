@@ -108,7 +108,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"Tabla": {
-											"value": "@item()['name']",
+											"value": "@replace(item()['name'],'.parquet','')",
 											"type": "Expression"
 										},
 										"Esquema": "SalesLT"
