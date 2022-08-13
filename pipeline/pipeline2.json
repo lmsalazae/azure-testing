@@ -70,6 +70,10 @@
 										"type": "AzureBlobFSReadSettings",
 										"recursive": true,
 										"wildcardFolderPath": "NuevosDatos",
+										"wildcardFileName": {
+											"value": "@item()['name']",
+											"type": "Expression"
+										},
 										"enablePartitionDiscovery": false
 									}
 								},
