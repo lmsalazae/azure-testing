@@ -11,9 +11,6 @@
 			},
 			"RutaDeArchivos": {
 				"type": "string"
-			},
-			"NombreDeArchivos": {
-				"type": "string"
 			}
 		},
 		"annotations": [],
