@@ -1,0 +1,29 @@
+{
+	"name": "ConjuntoDeDatos",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"SistemaDeArchivos": {
+				"type": "string"
+			},
+			"RutaDeArchivos": {
+				"type": "string"
+			},
+			"NombreDeArchivos": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
