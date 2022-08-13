@@ -77,7 +77,20 @@
 										"enablePartitionDiscovery": false
 									}
 								},
-								"enableStaging": false
+								"sink": {
+									"type": "AzureSqlSink",
+									"writeBehavior": "insert",
+									"sqlWriterUseTableLock": false
+								},
+								"enableStaging": false,
+								"translator": {
+									"type": "TabularTranslator",
+									"typeConversion": true,
+									"typeConversionSettings": {
+										"allowDataTruncation": true,
+										"treatBooleanAsNumber": false
+									}
+								}
 							},
 							"inputs": [
 								{
@@ -86,6 +99,19 @@
 									"parameters": {
 										"SistemaDeArchivos": "container-name",
 										"RutaDeArchivos": "NuevosDatos"
+									}
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "ConjuntoDeDatosSQL",
+									"type": "DatasetReference",
+									"parameters": {
+										"Tabla": {
+											"value": "@item()['name']",
+											"type": "Expression"
+										},
+										"Esquema": "SalesLT"
 									}
 								}
 							]
