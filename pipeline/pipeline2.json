@@ -99,8 +99,8 @@
 									"referenceName": "ConjuntoDeDatos",
 									"type": "DatasetReference",
 									"parameters": {
-										"SistemaDeArchivos": "container-name",
-										"RutaDeArchivos": "NuevosDatos"
+										"SistemaDeArchivos": "NO USADO",
+										"RutaDeArchivos": "NO USADO"
 									}
 								}
 							],
