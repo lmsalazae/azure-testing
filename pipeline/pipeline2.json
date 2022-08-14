@@ -99,7 +99,7 @@
 									"referenceName": "ConjuntoDeDatos",
 									"type": "DatasetReference",
 									"parameters": {
-										"SistemaDeArchivos": "NOUSADO",
+										"SistemaDeArchivos": "container-name",
 										"RutaDeArchivos": "NOUSADO"
 									}
 								}
